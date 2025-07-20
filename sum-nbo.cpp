@@ -6,7 +6,7 @@
 int processFile(const char *filename, uint32_t *values, int *count, uint32_t *total) {
     FILE *fp = fopen(filename, "rb");
     if (!fp) {
-        fprintf(stderr, "파일 오류로 열리지 않음.");
+        printf("파일 오류로 열리지 않음.");
         return 0;
     }
 
@@ -15,7 +15,7 @@ int processFile(const char *filename, uint32_t *values, int *count, uint32_t *to
     fclose(fp);
 
     if (read != 1) {
-        fprintf(stderr, "파일의 크기가 4바이트보다 작음.");
+        printf("파일의 크기가 4바이트보다 작음.");
         return 0;
     }
 
